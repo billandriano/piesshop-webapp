@@ -65,17 +65,22 @@ Order Item
 ![image](https://github.com/akazopidis/PiesShop/assets/70575515/846295ad-ae9f-4529-83b6-d3e9f86edd60)
 
 Pie
+
 ![image](https://github.com/akazopidis/PiesShop/assets/70575515/eb4ea8df-e11d-45e9-b9eb-a1333683b3cf)
 
 Role
+
 ![image](https://github.com/akazopidis/PiesShop/assets/70575515/a94bb8a9-9dea-49bf-8c01-ac787c992f24)
 
 User
+
 ![image](https://github.com/akazopidis/PiesShop/assets/70575515/a6dfc817-0200-454d-82ab-715ef512811b)
 
 User Role
+
 ![image](https://github.com/akazopidis/PiesShop/assets/70575515/9418a9f6-91c2-4364-a0c8-b25aa7ce10e8)
 
 Area
+
 ![image](https://github.com/akazopidis/PiesShop/assets/70575515/feb57956-8939-499a-b6c5-787b13f78ee1)
 
