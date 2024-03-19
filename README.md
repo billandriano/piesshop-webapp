@@ -11,10 +11,10 @@ Database: MySQL
 Home
 ![image](https://github.com/akazopidis/PiesShop/assets/70575515/3b60cc63-c3a8-4907-a528-d47260997c91)
 
-All Pies
+Single Pies
 ![image](https://github.com/akazopidis/PiesShop/assets/70575515/c430c94f-f166-4fa8-9260-c776e9cda5e0)
 
-Single Pies
+All Pies
 ![image](https://github.com/akazopidis/PiesShop/assets/70575515/0a57ac7a-6689-4e54-90a4-ff1043849cc9)
 
 Contact
