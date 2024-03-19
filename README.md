@@ -1,7 +1,11 @@
 Fully functional website in Jakarta EE 10 showcasing the MVC Design Pattern.
-Technologies used
+
+Technologies used:
+
 Front-End: HTML, CSS, Sass, JS
+
 Back-End: Jakarta EE 10
+
 Database: MySQL
 
 Home
