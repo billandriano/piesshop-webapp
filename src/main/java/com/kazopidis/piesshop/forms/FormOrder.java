@@ -33,14 +33,6 @@ public class FormOrder {
     @OrderItemValuesConstraint(message="Each quantity should be between 0 and 100")
     List<OrderItem> orderItems;
 
-    @NotNull(message = "A price must be selected for the offer")
-    boolean offer;
-
-    @NotNull(message = "You must choose a payment method")
-    String payment;
-
-    @OrderTimestampConstraint(message = "Orders can only be placed between 18:00 and 22:00.")
-    LocalDateTime timestamp;
 
     public FormOrder() {
     }
@@ -53,9 +45,7 @@ public class FormOrder {
         this.tel = tel;
         this.comments = comments;
         this.orderItems = orderItems;
-        this.offer = offer;
-        this.payment = payment;
-        this.timestamp = timestamp;
+        
     }
 
     public String getFullName() {
@@ -114,29 +104,6 @@ public class FormOrder {
         this.orderItems = orderItems;
     }
 
-    public boolean isOffer() {
-        return offer;
-    }
-
-    public void setOffer(boolean offer) {
-        this.offer = offer;
-    }
-
-    public String getPayment() {
-        return payment;
-    }
-
-    public void setPayment(String payment) {
-        this.payment = payment;
-    }
-
-    public LocalDateTime getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(LocalDateTime timestamp) {
-        this.timestamp = timestamp;
-    }
 
     @Override
     public String toString() {
@@ -148,9 +115,6 @@ public class FormOrder {
                 ", \ntel='" + tel + '\'' +
                 ", \ncomments='" + comments + '\'' +
                 ", \norderItems=" + orderItems +
-                ", \noffer=" + offer +
-                ", \npayment='" + payment + '\'' +
-                ", \ntimestamp=" + timestamp +
                 '}';
     }
 }

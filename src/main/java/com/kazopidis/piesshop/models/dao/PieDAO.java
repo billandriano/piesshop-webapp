@@ -73,4 +73,26 @@ public class PieDAO {
             throw new RuntimeException(e);
         }
     }
+
+    public static List<Pie> searchPies(String searchQuery) {
+        List<Pie> pies = new ArrayList<>();
+        try {
+            DataSource ds = (DataSource) new InitialContext().lookup("java:/comp/env/jdbc/piesshopdb");
+            try (Connection conn = ds.getConnection();
+                 PreparedStatement stmt = conn.prepareStatement("SELECT * FROM pie WHERE name LIKE ? OR description LIKE ?")) {
+                stmt.setString(1, "%" + searchQuery + "%");
+                stmt.setString(2, "%" + searchQuery + "%");
+                try (ResultSet rs = stmt.executeQuery()) {
+                    while (rs.next()) {
+                        pies.add(preparePieObject(rs));
+                    }
+                }
+            }
+        } catch (SQLException | NamingException e) {
+            throw new RuntimeException(e);
+        }
+        return pies;
+    }
+    
+    
 }

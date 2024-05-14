@@ -3,6 +3,7 @@
 <jsp:useBean id="formOrder" class="com.kazopidis.piesshop.forms.FormOrder" scope="request" />
 <jsp:useBean id="user" class="com.kazopidis.piesshop.models.User" scope="session" />
 
+
 <!DOCTYPE html>
 <html>
 
@@ -15,10 +16,6 @@
     <main>
         <h1>The pies</h1>
         <article>
-            <h2>Our pies at your place! </h2>
-            <p>
-                Ordering hours (18:00-22:00)
-            </p>
 
             <c:choose>
                 <c:when test="${requestScope['success']}">
@@ -27,28 +24,20 @@
                     </div>
                 </c:when>
                 <c:otherwise>
-
-                    <c:choose>
-                        <c:when test="${user.id==0}">
-                            <p>
-                                <a href="login?previouspage=buy">Login</a> to make an order, view your order history (or to repeat an old order)
-                            </p>
-                        </c:when>
-                        <c:otherwise>
-                            <p>
-                                Welcome ${user.fullName}! You can repeat some of your previous orders:
-                            </p>
-                            <ul>
-                                <c:set var="cnt" value="0" scope="request"/>
-                                <c:forEach var="order" items="${requestScope['previousOrders']}">
-                                    <li>
-                                        <a href="buy?previousorder=${cnt}">${order.stamp}: ${order.orderItems}</a>
-                                        <c:set var="cnt" value="${cnt + 1 }" scope="request"/>
-                                    </li>
-                                </c:forEach>
-                            </ul>
-                        </c:otherwise>
-                    </c:choose>
+                    <p>
+                        Welcome ${user.fullName}!
+                    </p>
+                    <ul>
+                        <c:set var="cnt" value="0" scope="request"/>
+                        <c:forEach var="order" items="${requestScope['previousOrders']}">
+                            <li>
+                                <a href="buy?previousorder=${cnt}">${order.stamp}: ${order.orderItems}</a>
+                                <c:set var="cnt" value="${cnt + 1 }" scope="request"/>
+                            </li>
+                        </c:forEach>
+                    </ul>
+                   
+                   
 
                     <c:if test="${requestScope['errors']!=null}">
                         <div class="error-message">${requestScope['errors']} </div>
@@ -98,26 +87,11 @@
                                 <input type="number" id="txt${pie.name}" name="Order${pie.name}" min="0" max="100" value="${empty formOrder.orderItems? (empty requestScope[pie.name]? 0: requestScope[pie.name]): formOrder.orderItems[pie.id-1].quantity}" >
                             </c:forEach>
 
-
-                            <input type="checkbox" id="chkΟffer1" name="offer1" value="offer1-on" ${formOrder.offer==true?"checked":""}>
-                            <label for="chkΟffer1">Special offer: Buy 10 pies, get a 5 euros discount on your total order</label>
-                        </section>
-
-                        <section class="payment">
-                            <h3>
-                                Method of Payment:
-                            </h3>
-                            <div class="radio-buttons">
-                                <input type="radio" id="rdPayOnDelivery" name="payment" value="payOnDelivery" ${formOrder.payment=='payOnDelivery'?"checked":""}>
-                                <label for="rdPayOnDelivery">Pay On Delivery</label>
-                                <input type="radio" id="rdCard" name="payment" value="visa" ${formOrder.payment=='visa'?"checked":""} disabled>
-                                <label for="rdCard">VISA (Not yet)</label>
-                            </div>
                         </section>
 
                         <div class="buttons">
                             <input type="submit" value="Submit">
-                            <input type="reset" value="Reset">
+                        
                         </div>
                     </form>
                 </c:otherwise>

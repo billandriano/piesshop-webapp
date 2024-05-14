@@ -27,49 +27,6 @@ public class BuyController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
-        List<Pie> pies = PieDAO.getPies();
-        request.setAttribute("pies",pies);
-
-
-        List<Area> areas = AreaDAO.getAreas();
-        request.setAttribute("areas",areas);
-
-        //User's session
-        User user = UserDAO.getUserBySession(request.getSession().getId());
-
-        request.getSession().setAttribute("user", user);
-
-        if (user != null) {
-            List<OrderDAO.RecentOrderHistoryItem> recentOrders = OrderDAO.recentOrdersOfUser(user, 5);
-            request.setAttribute("previousOrders", recentOrders); //Sets the retrieved orders as an attribute named "previousOrders" in the request.
-
-            String previousOrder = request.getParameter("previousorder"); //: Retrieves the value of the parameter named "previousorder" from the request.
-            if (previousOrder!=null) {
-                int prev = Integer.parseInt(previousOrder); //: Parses the selected previous order index as an integer.
-
-                // Iterate through the items in the order specified by the selected index.
-                for (Map.Entry<String, Integer> entry : recentOrders.get(prev).getOrderItems().entrySet()) {
-                    String itemName = entry.getKey();
-                    int quantity = entry.getValue();
-
-                    System.out.println(itemName);
-                    System.out.println(quantity);
-
-                    // Dynamically set request attributes based on item names
-                    request.setAttribute(itemName, quantity);
-                }
-            }
-        }
-
-        //trivial response
-        getServletContext()
-                .getRequestDispatcher("/WEB-INF/templates/buy.jsp")
-                .forward(request, response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         // Check if the user is logged in
         User user = (User) request.getSession().getAttribute("user");
         if (user == null || user.getId() == 0) {
@@ -79,6 +36,26 @@ public class BuyController extends HttpServlet {
                     .forward(request, response);
             return;
         }
+
+        List<Pie> pies = PieDAO.getPies();
+        request.setAttribute("pies",pies);
+
+
+        List<Area> areas = AreaDAO.getAreas();
+        request.setAttribute("areas",areas);
+
+
+        request.getSession().setAttribute("user", user);
+
+
+        //trivial response
+        getServletContext()
+                .getRequestDispatcher("/WEB-INF/templates/buy.jsp")
+                .forward(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         boolean offerSelected = request.getParameter("offer1") != null;
 
@@ -111,15 +88,6 @@ public class BuyController extends HttpServlet {
             totalPies += orderItem.getQuantity();
         }
 
-        if (totalPies >= 10) {
-            if (offerSelected) {
-                formOrder.setOffer(true);
-            } else {
-                formOrder.setOffer(false);
-            }
-        } else {
-            formOrder.setOffer(false);
-        }
 
         formOrder.setOrderItems(orderItems);
 

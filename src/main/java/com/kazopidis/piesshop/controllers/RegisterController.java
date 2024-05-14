@@ -34,12 +34,8 @@ public class RegisterController extends HttpServlet {
         } else {
             String code = request.getParameter("code");
 
-            if (code != null) {
-                boolean success = UserDAO.verifyUser(code);
-                request.setAttribute("registerComplete", success);
-                getServletContext().getRequestDispatcher("/WEB-INF/templates/register.jsp")
-                        .forward(request, response);
-            } else {
+            if (code == null) {
+               
                 getServletContext().getRequestDispatcher("/WEB-INF/templates/register.jsp")
                         .forward(request, response);
             }
@@ -54,45 +50,28 @@ public class RegisterController extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String password2 = request.getParameter("password2");
-
-        FormRegister formRegister = new FormRegister(fullName,email,tel,username,password,password2);
-
+    
+        FormRegister formRegister = new FormRegister(fullName, email, tel, username, password, password2);
+    
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
         Set<ConstraintViolation<FormRegister>> errors = validator.validate(formRegister);
-
-        if (errors.isEmpty()) { //No errors
-
-            int id = UserDAO.storeUserUnverified(formRegister);
-            User user = UserDAO.getUserById(id);
-            Email.sendEmailCompleteRegister(user);
-
-            System.out.println(formRegister);
-
-            // response
-            request.setAttribute("success",true);
-
-            getServletContext()
-                    .getRequestDispatcher("/WEB-INF/templates/register.jsp")
-                    .forward(request, response);
-        } else { // Errors
+    
+        if (errors.isEmpty()) {
+            int id = UserDAO.storeUserVerified(formRegister);
+            request.setAttribute("success", true);
+            getServletContext().getRequestDispatcher("/WEB-INF/templates/register.jsp").forward(request, response);
+        } else {
             StringBuilder errorMessage = new StringBuilder("<ul>");
-
             errorMessage.append("<p>The form contains the following errors:</p>");
-
-            for (var error: errors) {
+            for (var error : errors) {
                 errorMessage.append("<li>" + error.getMessage() + "</li>");
             }
-
             errorMessage.append("</ul>");
-
-            request.setAttribute("errors",errorMessage);
-            request.setAttribute("formRegister",formRegister);
-
-            getServletContext()
-                    .getRequestDispatcher("/WEB-INF/templates/register.jsp")
-                    .forward(request, response);
+            request.setAttribute("errors", errorMessage.toString());
+            request.setAttribute("formRegister", formRegister);
+            getServletContext().getRequestDispatcher("/WEB-INF/templates/register.jsp").forward(request, response);
         }
-
     }
+    
 }

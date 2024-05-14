@@ -171,8 +171,6 @@ public class Email {
                     text += "\t\t"+pie.getName()+": "+orderItem.getQuantity() + "\n";
                 }
 
-                text += "\tOffer: " + formOrder.isOffer() + "\n" +
-                "\tPayment Method: " + formOrder.getPayment() + "\n";
 
 
         sendTextEmail(properties.getProperty("mail.admin"), "New order", text);
@@ -213,34 +211,19 @@ public class Email {
                     "    </tr>\n";
         }
 
-        if (formOrder.isOffer()) {
-            text += "  </tbody>\n" +
-                    "  <tfoot>\n" +
-                    "    <tr>\n" +
-                    "      <td colspan=\"3\" style=\"padding: 10px;font-weight: bold;font-size: 20px; text-decoration: line-through;\">Grand Total (before discount): " + String.format("%.2f", grandTotal) + "€</td>\n" +
-                    "    </tr>\n" +
-                    "    <tr>\n" +
-                    "      <td colspan=\"3\" style=\"padding: 10px;font-weight: bold;font-size: 20px;\">Grand Total (with discount): " + String.format("%.2f", grandTotal-PRICE_DISCOUNT) + "€</td>\n" +
-                    "    </tr>\n" +
-                    "  </tfoot>\n" +
-                    "</table>\n";
-        } else {
-            text += "  </tbody>\n" +
-                    "  <tfoot>\n" +
-                    "    <tr>\n" +
-                    "      <td colspan=\"3\" style=\"padding: 10px;font-weight: bold;font-size: 20px;\">Grand Total: " + String.format("%.2f", grandTotal) + "€</td>\n" +
-                    "    </tr>\n" +
-                    "  </tfoot>\n" +
-                    "</table>\n";
-        }
+        
+        text += "  </tbody>\n" +
+                "  <tfoot>\n" +
+                "    <tr>\n" +
+                "      <td colspan=\"3\" style=\"padding: 10px;font-weight: bold;font-size: 20px;\">Grand Total: " + String.format("%.2f", grandTotal) + "€</td>\n" +
+                "    </tr>\n" +
+                "  </tfoot>\n" +
+                "</table>\n";
+        
 
-        LocalDateTime timestamp = formOrder.getTimestamp();
-        LocalDateTime timestampUntil = timestamp.plus(30, ChronoUnit.MINUTES);
+        
 
 
-        text += "<p style=\"padding: 30px;text-align: center;font-size: 20px;font-weight: bold;\">Estimated Delivery Time: " +
-                timestampUntil.format(DateTimeFormatter.ofPattern("d/M/u (kk:mm:ss)")) +
-                "</p>";
 
         sendHtmlEmail(formOrder.getEmail(), "Your Order!", text);
 

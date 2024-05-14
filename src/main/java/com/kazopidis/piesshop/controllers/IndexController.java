@@ -10,7 +10,7 @@ import jakarta.servlet.annotation.*;
 public class IndexController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         getServletContext()
-                .getRequestDispatcher("/WEB-INF/templates/index.jsp")
+                .getRequestDispatcher("/WEB-INF/templates/login.jsp")
                 .forward(request, response);
     }
 

@@ -42,7 +42,7 @@
 
                         <span>(*) The fields are required</span>
 
-                        <a href="password-reset">Forgot your password?</a>
+                        
                         <input type="submit" value="Submit">
                     </form>
 

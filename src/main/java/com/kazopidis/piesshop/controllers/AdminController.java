@@ -33,21 +33,13 @@ public class AdminController extends HttpServlet {
             getServletContext()
                     .getRequestDispatcher("/WEB-INF/templates/error/unauthorized.jsp")
                     .forward(request,response);
-        } else {
-            String action = request.getParameter("action");
-            if (action!=null) {
-                if (request.getParameter("action").equals("1")) {
-                    UserDAO.deleteUnverifiedUsers();
-                } else if (request.getParameter("action").equals("2")) {
-                    UserDAO.updateUnverifiedUsersCode();
-                }
-            }
+        } 
 
-            List<Integer> adminStats = UserDAO.adminStats();
-            request.setAttribute("adminStats",adminStats);
-            getServletContext()
-                    .getRequestDispatcher("/WEB-INF/templates/admin.jsp")
-                    .forward(request,response);
-        }
+        List<Integer> adminStats = UserDAO.adminStats();
+        request.setAttribute("adminStats",adminStats);
+        getServletContext()
+                .getRequestDispatcher("/WEB-INF/templates/admin.jsp")
+                .forward(request,response);
+        
     }
 }

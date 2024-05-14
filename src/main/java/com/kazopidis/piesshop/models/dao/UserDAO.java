@@ -142,8 +142,8 @@ public class UserDAO {
         }
     }
 
-    // Saving the user as unverified first
-    public static int storeUserUnverified(FormRegister formRegister) {
+    // Saving the user as verified 
+    public static int storeUserVerified(FormRegister formRegister) {
         try {
             DataSource ds = (DataSource) new InitialContext().lookup("java:/comp/env/jdbc/piesshopdb");
             Connection connection =  ds.getConnection();
@@ -166,7 +166,7 @@ public class UserDAO {
             statement.setString(3, formRegister.getFullName());
             statement.setString(4, formRegister.getEmail());
             statement.setString(5, formRegister.getTel());
-            statement.setString(6, "unverified");
+            statement.setString(6, "verified");
             statement.setString(7, code);
             statement.setString(8, salt);
 
@@ -201,88 +201,6 @@ public class UserDAO {
     }
 
 
-    public static boolean verifyUser(String code) {
-
-        try {
-            DataSource ds = (DataSource) new InitialContext().lookup("java:/comp/env/jdbc/piesshopdb");
-            Connection connection = ds.getConnection();
-
-            String query = "SELECT * FROM user WHERE code = ?";
-
-            PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1, code);
-
-            ResultSet resultSet = statement.executeQuery();
-
-            boolean result = false;
-
-            if (resultSet.next()) {
-                User user = prepareUserObject(resultSet);
-
-                if (user.getStatus().equals("unverified")) {
-                    query = "UPDATE piesshopdb.user SET status = 'verified' WHERE id = ?";
-                    statement = connection.prepareStatement(query);
-                    statement.setInt(1, user.getId());
-
-                    System.out.println("userID: "+user.getId());
-
-                    statement.executeUpdate();
-
-                    statement.close();
-                    result = true;
-                }
-            }
-
-            resultSet.close();
-            statement.close();
-            connection.close();
-
-            return  result;
-
-
-        } catch (SQLException | NamingException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
-
-    public static void deleteUnverifiedUsers() {
-        try {
-            DataSource ds = (DataSource) new InitialContext().lookup("java:/comp/env/jdbc/piesshopdb");
-            Connection connection = ds.getConnection();
-
-            String query = "DELETE FROM user WHERE status = ?";
-            PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1,"unverified");
-
-            statement.executeUpdate();
-
-            statement.close();
-            connection.close();
-
-        } catch (SQLException | NamingException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static void updateUnverifiedUsersCode() {
-        try {
-            DataSource ds = (DataSource) new InitialContext().lookup("java:/comp/env/jdbc/piesshopdb");
-            Connection connection = ds.getConnection();
-
-            String query = "UPDATE user SET code = NULL WHERE status = ? AND code IS NOT NULL";
-            PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1,"verified");
-
-            statement.executeUpdate();
-
-            statement.close();
-            connection.close();
-
-        } catch (SQLException | NamingException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
 
     public static List<Integer> adminStats() {

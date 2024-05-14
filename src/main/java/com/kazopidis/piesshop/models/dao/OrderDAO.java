@@ -65,8 +65,8 @@ public class OrderDAO {
             DataSource ds = (DataSource) new InitialContext().lookup("java:/comp/env/jdbc/piesshopdb");
             Connection connection = ds.getConnection();
 
-            String query = "INSERT INTO piesshopdb.order (fullname, address, area_id, email, tel, comments, offer, payment, stamp, user_id)" +
-                    " VALUES (?,?,?,?,?,?,?,?,?,?)";
+            String query = "INSERT INTO piesshopdb.order (fullname, address, area_id, email, tel, comments, user_id)" +
+                    " VALUES (?,?,?,?,?,?,?)";
 
             PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
 
@@ -76,10 +76,7 @@ public class OrderDAO {
             statement.setString(4, formOrder.getEmail());
             statement.setString(5, formOrder.getTel());
             statement.setString(6, formOrder.getComments());
-            statement.setBoolean(7, formOrder.isOffer());
-            statement.setString(8, formOrder.getPayment());
-            statement.setTimestamp(9, java.sql.Timestamp.valueOf(formOrder.getTimestamp()));
-            statement.setInt(10, user.getId());
+            statement.setInt(7, user.getId());
 
             statement.executeUpdate();
 
@@ -107,58 +104,6 @@ public class OrderDAO {
                 }
             }
         } catch (NamingException | SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    // This method retrieves the recent order history of a specific user.
-    //It takes a User object and an integer n as parameters, where n represents the number of recent orders to retrieve.
-    public static List<RecentOrderHistoryItem> recentOrdersOfUser(User user, int n) {
-        try {
-            DataSource ds = (DataSource) new InitialContext().lookup("java:/comp/env/jdbc/piesshopdb");
-            Connection connection = ds.getConnection();
-
-            // Constructs a SQL query to fetch recent orders of the specified user.
-            String query = "SELECT o.stamp AS stamp, p.name AS pie, oi.quantity AS quantity\n" +
-                    "FROM order_item oi\n" +
-                    "\tJOIN pie p ON oi.pie_id = p.id\n" +
-                    "    JOIN piesshopdb.order o ON oi.order_id = o.id\n" +
-                    "    JOIN piesshopdb.user u ON o.user_id = u.id\n" +
-                    "WHERE u.id = ?\n" +
-                    "ORDER BY stamp DESC, p.id\n" +
-                    "LIMIT ?";
-
-            PreparedStatement statement = connection.prepareStatement(query);
-            statement.setInt(1, user.getId());
-            statement.setInt(2, getNumberOfPies() * n);
-
-            ResultSet resultSet = statement.executeQuery();
-
-            List<RecentOrderHistoryItem> orders = new ArrayList<>();
-            LocalDateTime previous = null;
-
-            while (resultSet.next()) {
-                if (Integer.parseInt(resultSet.getString("quantity")) > 0) {
-                    LocalDateTime stamp = resultSet.getTimestamp("stamp").toLocalDateTime();
-                    if (!stamp.equals(previous)) {
-                        orders.add(new RecentOrderHistoryItem(
-                                stamp.format(DateTimeFormatter.ofPattern("dd/MM/yyyy(HH:mm:ss)")),
-                                new HashMap<>()
-                        ));
-                        orders.get(orders.size() - 1).getOrderItems().put(resultSet.getString("pie"), resultSet.getInt("quantity"));
-                        previous = stamp; //Updates the previous timestamp variable with the current timestamp (stamp).
-                    } else {
-                        orders.get(orders.size() - 1).getOrderItems().put(resultSet.getString("pie"), resultSet.getInt("quantity"));
-                    }
-                }
-            }
-
-            resultSet.close();
-            statement.close();
-            connection.close();
-
-            return orders;
-        } catch (SQLException | NamingException e) {
             throw new RuntimeException(e);
         }
     }

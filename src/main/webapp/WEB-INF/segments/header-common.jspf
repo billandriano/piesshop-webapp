@@ -12,16 +12,14 @@
         <span class="line3 hamb-line"></span>
     </label>
     <ul>
-        <li><a href="${pageContext.request.contextPath}/">Home</a></li>
-        <li><a href="${pageContext.request.contextPath}/pies">Pies</a></li>
-        <li><a href="${pageContext.request.contextPath}/buy">Order</a></li>
-        <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
         <c:choose>
             <c:when test="${empty user or user.id == 0}">
                 <li><a href="${pageContext.request.contextPath}/register">Register</a></li>
                 <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
             </c:when>
             <c:otherwise>
+                <li><a href="${pageContext.request.contextPath}/pies">Pies</a></li>
+                <li><a href="${pageContext.request.contextPath}/buy">Order</a></li>
                 <li><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
             </c:otherwise>
         </c:choose>
