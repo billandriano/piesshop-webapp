@@ -2,7 +2,7 @@
 <footer>
     <div class="first-column">
         <div id="cart-items"></div>
-        <button type="button" onclick="clearCart()">Clear Cart</button> 
+        <button type="button" id="reset-button" onclick="clearCart()">Clear Cart</button> 
     </div>
     <div class="second-column">
         
