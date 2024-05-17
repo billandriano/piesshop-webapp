@@ -904,10 +904,7 @@ form.buy section.customer-info {
   grid-auto-rows: min-content;
   grid-auto-columns: 100%;
 }
-form.buy section.order {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
+
 form.buy section.payment div.radio-buttons {
   display: flex;
   justify-content: center;

@@ -9,6 +9,59 @@
 
 <%@ include file="/WEB-INF/segments/head.jspf"%>
 
+<script>
+    // Function to check if cart contains a pie with the given name
+    function isPieInCart(pieName) {
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        return cartItems.some(item => item.name === pieName);
+    }
+
+    // Function to create or update input fields for pies in cart
+    function createPieInputs() {
+        const pieInputContainer = document.querySelector('#pie-inputs');
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        if (cartItems.length > 0) {
+            cartItems.forEach(item => {
+                let input = document.querySelector('#txt' + item.name);
+                let hiddenInput = document.querySelector('input[name="Order' + item.name + '_hidden"]');
+                if (input) {
+                    // Update the value of the existing input
+                    input.value = item.quantity;
+                } else {
+                    // Create new input elements if they don't exist
+                    const label = document.createElement('label');
+                    label.htmlFor = 'txt' + item.name;
+                    label.textContent = item.name + ': ';
+
+                    input = document.createElement('input');
+                    input.type = 'number';
+                    input.id = 'txt' + item.name;
+                    input.name = 'Order' + item.name;
+                    input.min = 0;
+                    input.max = 100;
+                    input.value = item.quantity;
+
+                    hiddenInput = document.createElement('input');
+                    hiddenInput.type = 'hidden';
+                    hiddenInput.name = 'Order' + item.name + '_hidden';
+                    hiddenInput.value = 0;
+
+                    pieInputContainer.appendChild(hiddenInput);
+                    pieInputContainer.appendChild(label);
+                    pieInputContainer.appendChild(input);
+                    pieInputContainer.appendChild(document.createElement('br'));
+                }
+            });
+        }
+    }
+
+    // Execute createPieInputs on page load
+    window.onload = function() {
+        createPieInputs();
+    };
+</script>
+
 <body>
 <div class="container">
     <%@ include file="/WEB-INF/segments/header-pages.jspf"%>
@@ -26,18 +79,8 @@
                 <c:otherwise>
                     <p>
                         Welcome ${user.fullName}!
-                    </p>
-                    <ul>
-                        <c:set var="cnt" value="0" scope="request"/>
-                        <c:forEach var="order" items="${requestScope['previousOrders']}">
-                            <li>
-                                <a href="buy?previousorder=${cnt}">${order.stamp}: ${order.orderItems}</a>
-                                <c:set var="cnt" value="${cnt + 1 }" scope="request"/>
-                            </li>
-                        </c:forEach>
-                    </ul>
-                   
-                   
+                    </p>                   
+                
 
                     <c:if test="${requestScope['errors']!=null}">
                         <div class="error-message">${requestScope['errors']} </div>
@@ -80,12 +123,18 @@
                             <h3>
                                 Order:
                             </h3>
-
-
-                            <c:forEach var="pie" items="${requestScope['pies']}">
-                                <label for="txt${pie.name}">${pie.name}: </label>
-                                <input type="number" id="txt${pie.name}" name="Order${pie.name}" min="0" max="100" value="${empty formOrder.orderItems? (empty requestScope[pie.name]? 0: requestScope[pie.name]): formOrder.orderItems[pie.id-1].quantity}" >
-                            </c:forEach>
+                            
+                            <div id="pie-inputs">
+                                <c:forEach var="pie" items="${requestScope['pies']}">
+                                    <label for="txt${pie.name}">${pie.name}: </label>
+                                    <input type="number" id="txt${pie.name}" name="Order${pie.name}" min="0" max="100" value="${empty formOrder.orderItems? (empty requestScope[pie.name]? 0: requestScope[pie.name]): formOrder.orderItems[pie.id-1].quantity}" >
+                                    <script>
+                                        if (isPieInCart('${pie.name}')) {
+                                            document.querySelector('#txt${pie.name}').value = cartItems.find(item => item.name === '${pie.name}').quantity;
+                                        }
+                                    </script>
+                                </c:forEach>
+                            </div>
 
                         </section>
 
