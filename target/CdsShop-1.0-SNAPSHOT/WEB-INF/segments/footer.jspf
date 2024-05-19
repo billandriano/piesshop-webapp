@@ -1,0 +1,14 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<footer>
+    <div class="first-column">
+        <div id="cart-items"></div>
+        <button type="button" id="reset-button" onclick="clearCart()">Clear Cart</button> 
+    </div>
+    <div class="second-column">
+        
+    </div>
+    <div class="third-column">
+        
+    </div>
+    <div class="design"><p></p></div>
+</footer>

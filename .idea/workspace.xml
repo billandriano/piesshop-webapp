@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="CdsShop:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9a108752-b6c3-4378-9caf-34793747a150" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/database/pies_script.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/controllers/AdminController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/controllers/BuyController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/controllers/ContactController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/controllers/IndexController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/controllers/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/controllers/LogoutController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/controllers/PasswordResetChangeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/controllers/PasswordResetEmailController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/controllers/PieController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/controllers/PiesController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/controllers/RegisterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/crypto/Crypto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/email/Email.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/FormContact.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/FormLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/FormOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/FormRegister.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/FormResetEmail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/FormResetPassword.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/validators/AtLeastOneItemInOrderConstraint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/validators/AtLeastOneItemInOrderValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/validators/EmailExistsConstraint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/validators/EmailExistsValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/validators/EmailNotExistsConstraint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/validators/EmailNotExistsValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/validators/OrderItemValuesConstraint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/validators/OrderItemValuesValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/validators/OrderTimestampConstraint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/validators/OrderTimestampValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/validators/UsernameNotExistsConstraint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/forms/validators/UsernameNotExistsValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/models/Area.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/models/OrderItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/models/Pie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/models/dao/AreaDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/models/dao/OrderDAO$RecentOrderHistoryItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/models/dao/OrderDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/models/dao/OrderItemDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/models/dao/PieDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/kazopidis/piesshop/models/dao/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/resources/mail.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/META-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/segments/aside.jspf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/segments/footer.jspf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/segments/head.jspf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/segments/header-common.jspf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/segments/header-index.jspf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/segments/header-pages.jspf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/templates/admin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/templates/buy.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/templates/contact.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/templates/error/unauthorized.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/templates/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/templates/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/templates/logout.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/templates/password-change.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/templates/password-reset.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/templates/pie.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/templates/pies.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/templates/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/boureki.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/cook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/delivery.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/instagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/kimadopita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/kolokythopita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/linkedin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/manitaropita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/pies-shop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/prasopita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/spanakopita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/store1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/store2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/images/tyropita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/js/slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/abstracts/_colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/components/_slider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/core/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/core/_typography.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/forms/_buy.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/forms/_contact.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/forms/_generic.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/layout/_aside.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/layout/_footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/layout/_header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/layout/_main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/layout/_menu.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/layout/_page.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/messageboxes/_error.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/messageboxes/_success.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/sections/_extended-header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/sections/_table-pies.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/sass/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/styles/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/webapp/styles/style.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/pies_script.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/controllers/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/controllers/BuyController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/controllers/ContactController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/controllers/IndexController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/controllers/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/controllers/LogoutController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/controllers/PasswordResetChangeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/controllers/PasswordResetEmailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/controllers/PieController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/controllers/PiesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/controllers/RegisterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/crypto/Crypto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/email/Email.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/FormContact.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/FormLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/FormOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/FormRegister.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/FormResetEmail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/FormResetPassword.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/validators/AtLeastOneItemInOrderConstraint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/validators/AtLeastOneItemInOrderValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/validators/EmailExistsConstraint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/validators/EmailExistsValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/validators/EmailNotExistsConstraint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/validators/EmailNotExistsValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/validators/OrderItemValuesConstraint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/validators/OrderItemValuesValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/validators/OrderTimestampConstraint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/validators/OrderTimestampValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/validators/UsernameNotExistsConstraint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/forms/validators/UsernameNotExistsValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/models/Area.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/models/OrderItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/models/Pie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/models/dao/AreaDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/models/dao/OrderDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/models/dao/OrderItemDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/models/dao/PieDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kazopidis/piesshop/models/dao/UserDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/segments/head.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/segments/head.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/segments/header-common.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/segments/header-common.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/segments/header-index.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/segments/header-index.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/admin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/buy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/buy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/contact.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/logout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pie.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pies.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/boureki.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/cook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/delivery.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/instagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/kimadopita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/kolokythopita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/linkedin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/manitaropita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/pies-shop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/prasopita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/spanakopita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/store1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/store2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/tyropita.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/forms/_contact.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/layout/_aside.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/layout/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/sections/_extended-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/sections/_extended-header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sass/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/styles/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2ghbBwUiAuzTmdBjocZDRBsxjp3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TomEE Server.CdsShop.executor": "Run",
+    "Tomcat Server.Tomcat 10.1.23.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="TomeeConfiguration" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 10.1.23" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.23" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="https://localhost:443/CdsShop_war/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="CdsShop:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/CdsShop_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="cb6e39e3-a2a2-4cca-bfdb-1722c795a8b4" />
+        <option name="HTTPS_PORT" value="443" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="14058" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="CdsShop:war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9a108752-b6c3-4378-9caf-34793747a150" name="Changes" comment="" />
+      <created>1716152627440</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716152627440</updated>
+      <workItem from="1716152633426" duration="185000" />
+      <workItem from="1716152831699" duration="774000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
